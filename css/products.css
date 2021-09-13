@@ -1,0 +1,47 @@
+:root {
+  --background-color: 241, 255, 250;
+  --primary-color: 86, 130, 89;
+  --dark-primary-color: 70, 78, 71;
+  --light-primary-color: 204, 252, 203;
+  --light-primary-color-variant: 150, 230, 179;
+  --card-background-color: 255, 255, 255;
+  --shadow-pattern: 0.0625rem 0.0625rem 0.25rem rgb(var(--primary-color));
+}
+
+/**/
+.product__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Card styles*/
+.card {
+  background: rgb(var(--card-background-color));
+  border-bottom: 0.2rem solid transparent;
+  max-width: 14rem;
+}
+.card:not(:last-child) {
+  margin: 2rem;
+}
+.card:hover {
+  border-bottom: 0.2rem solid rgb(var(--light-primary-color-variant));
+}
+.card__icon {
+  width: 18rem;
+}
+.card__title {
+  color: rgb(var(--dark-primary-color));
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.card__description {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.card__price {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,12 @@
+/*Feature*/
+.feature__title {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+}
+.feature__description {
+  font-size: 1rem;
+  margin-top: 0;
+}
+.feature__icon {
+  width: 4.5rem;
+}
