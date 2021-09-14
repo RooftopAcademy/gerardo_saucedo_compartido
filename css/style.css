@@ -53,9 +53,37 @@ body {
 /* Menu*/
 .menu {
   list-style: none;
-  display: inline-flex;
   margin: 0;
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+  background: rgb(var(--dark-primary-color));
+  padding: 0 1rem;
+  text-align: center;
+  display: none;
 }
+.menu--mobile-visibility {
+  display: block;
+}
+.menu__icon-container {
+  align-self: center;
+  cursor: pointer;
+}
+
+.menu__icon {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: rgb(var(--light-primary-color));
+  position: relative;
+  top: 0;
+}
+.menu__icon--top {
+  top: -0.17rem;
+}
+.menu__icon--bottom {
+  top: 0.2rem;
+}
+
 .menu__item {
   border: 1px solid transparent;
   padding: 0.4rem;
@@ -147,6 +175,13 @@ body {
   }
   .main {
     max-width: 90%;
+  }
+  .menu {
+    display: inline-flex;
+    position: static;
+  }
+  .menu__icon {
+    display: none;
   }
 }
 
