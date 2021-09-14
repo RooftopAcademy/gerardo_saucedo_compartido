@@ -27,9 +27,15 @@
         <figure class="brand">
           <a href="#" class="menu__link">Items Shop</a>
         </figure>
-        <ul class="menu">
+        <div id="responsive-icon" class="menu__icon-container">
+          <div class="menu__icon menu__icon--top"></div>
+          <div class="menu__icon"></div>
+          <div class="menu__icon menu__icon--bottom"></div>
+        </div>
+
+        <ul id="menu" class="menu">
           <li class="menu__item">
-            <a href="index.html" class="menu__link"> Home </a>
+            <a href="#" class="menu__link"> Home </a>
           </li>
           <li class="menu__item">
             <a href="products.html" class="menu__link"> Products </a>
@@ -40,7 +46,7 @@
         <h1 id="banner-title" class="title text--center">All products</h1>
       </section>
     </header>
-    <main class="main shadow--rounded display--flex flex--center">
+    <main class="main shadow--rounded display--flex flex--space-evenly">
       <aside class="sidebar flex--start"><h2>Lorem, ipsum dolor.</h2></aside>
       <div class="products display--flex flex--wrap flex--space-evenly">
         <section class="card">
@@ -213,5 +219,6 @@
         </section>
       </div>
     </main>
+    <script src="js/app.js"></script>
   </body>
 </html>
