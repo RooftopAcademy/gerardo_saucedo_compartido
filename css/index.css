@@ -1,4 +1,10 @@
 /*Feature*/
+.features {
+  width: 100%;
+}
+.feature {
+  max-width: 14rem;
+}
 .feature__title {
   font-size: 1.4rem;
   margin: 0.3rem;
@@ -9,4 +15,13 @@
 }
 .feature__icon {
   width: 4.5rem;
+}
+@media (min-width: 1024px) {
+  .features,
+  .description {
+    width: 70%;
+  }
+  .description {
+    display: inline-block;
+  }
 }

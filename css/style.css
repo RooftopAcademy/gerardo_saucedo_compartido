@@ -138,6 +138,10 @@ body {
   display: flex;
   flex-direction: row;
 }
+.display--inline-flex {
+  display: inline-flex;
+  flex-direction: row;
+}
 .flex-direction--column {
   flex-direction: column;
 }
@@ -147,6 +151,10 @@ body {
 }
 .flex--space-evenly {
   justify-content: space-evenly;
+  align-items: center;
+}
+.flex--space-around {
+  justify-content: space-around;
   align-items: center;
 }
 .flex--wrap {
@@ -166,7 +174,7 @@ body {
   border-radius: 0.125rem;
 }
 
-@media all and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .sidebar {
     display: inline;
   }
