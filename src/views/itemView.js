@@ -2,8 +2,7 @@
  *@param product
  */
 function getItemView(product) {
-  const patter = `
-    <section class="card">
+  return `<section class="card">
           <a
             class="
               product__link

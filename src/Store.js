@@ -7,4 +7,7 @@ class Store {
   fetchProducts() {
     this.productsList.push(new Product());
   }
+  getAllProducts() {
+    return this.productsList;
+  }
 }
