@@ -5,7 +5,8 @@ class Product {
     description = "",
     level = 144,
     image = "../img/anti-air.png",
-    price = "$50"
+    price = "$50",
+    quantity = 200
   ) {
     this.id = id;
     this.name = name;
@@ -13,6 +14,7 @@ class Product {
     this.level = level;
     this.image = image;
     this.price = price;
+    this.quantity = quantity;
   }
   getId() {
     return this.id;
@@ -49,5 +51,11 @@ class Product {
   }
   setPrice(price) {
     this.price = price;
+  }
+  getQuantity() {
+    return this.quantity;
+  }
+  setQuantity(quantity) {
+    this.quantity = quantity;
   }
 }
