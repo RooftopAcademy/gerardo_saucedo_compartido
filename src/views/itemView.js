@@ -12,15 +12,12 @@ function getItemView(product) {
             "
             href="detail.html"
           >
-            <img class="card__icon" src="img/anti-air.png" alt="lorem" />
-            <h2 class="card__title">200 Anti air traps</h2>
+            <img class="card__icon" src="${product.getImage()}" alt="lorem" />
+            <h2 class="card__title">${product.getQuantity()} ${product.getName()}</h2>
             <p class="card__description text--center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-              mollitia maxime cupiditate eaque perspiciatis obcaecati a quidem,
-              ullam cum, est, impedit facere ab dolores doloribus. Est voluptas
-              vero sint laborum?
+              ${product.getDescription()}
             </p>
-            <p class="card__price">$6.99</p>
+            <p class="card__price">${product.getPrice()}</p>
           </a>
         </section>
     `;
