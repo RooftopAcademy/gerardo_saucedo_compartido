@@ -3,7 +3,7 @@
  */
 function getItemView(product) {
   const template = document.createElement("section");
-  template.dataset.id = product.id;
+  template.dataset.id = product.getId();
   template.classList.add(
     "card",
     "display--flex",
