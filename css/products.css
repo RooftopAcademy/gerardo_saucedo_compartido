@@ -19,6 +19,7 @@
   background: rgb(var(--card-background-color));
   border-bottom: 0.2rem solid transparent;
   max-width: 14rem;
+  cursor: pointer;
 }
 .card:not(:last-child) {
   margin: 2rem;
