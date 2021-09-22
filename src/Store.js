@@ -54,4 +54,7 @@ class Store {
   getAllProducts() {
     return this.productsList;
   }
+  findProductById(id) {
+    return this.productsList.find((product) => product.id == id);
+  }
 }
