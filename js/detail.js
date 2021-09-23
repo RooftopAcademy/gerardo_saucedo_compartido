@@ -1,9 +1,16 @@
 function populateHTML() {
   const productsContainer = document.getElementById("product-detail");
   const store = new Store();
-  store.fetchProducts();
-  const view = getItemView(store.findProductById(localStorage.getItem("id")));
+  const id = localStorage.getItem("id");
 
-  productsContainer.appendChild(view);
+  store.fetchProducts().then((res) => {
+    store.setProducts(res);
+    const view = getItemView(store.findProductById(id));
+    view.addEventListener("click", function () {
+      localStorage.setItem("id", this.dataset.id);
+      window.location.href = "detail.html";
+    });
+    productsContainer.appendChild(view);
+  });
 }
 populateHTML();
