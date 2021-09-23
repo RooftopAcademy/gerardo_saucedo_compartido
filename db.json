@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "Anti air trap",
+      "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "level": 144,
+      "image": "../img/anti-air.png",
+      "price": "$50",
+      "quantity": 200
+    },
+    {
+      "id": 1,
+      "name": "Broadside trap",
+      "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "level": 144,
+      "image": "../img/broadside.png",
+      "price": "$50",
+      "quantity": 200
+    },
+    {
+      "id": 2,
+      "name": "Ceiling drop trap",
+      "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "level": 144,
+      "image": "../img/ceiling-drop-trap.png",
+      "price": "$50",
+      "quantity": 200
+    },
+    {
+      "id": 3,
+      "name": "Ceiling electric field trap",
+      "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "level": 144,
+      "image": "../img/ceiling-electric-field.png",
+      "price": "$50",
+      "quantity": 200
+    },
+    {
+      "id": 4,
+      "name": "Ceiling gas trap",
+      "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "level": 144,
+      "image": "../img/ceiling-gas-trap.png",
+      "price": "$50",
+      "quantity": 200
+    }
+  ]
+}
