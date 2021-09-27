@@ -1,0 +1,25 @@
+{
+  "name": "primera-practica",
+  "version": "1.0.0",
+  "description": "- Catalog\r - Cart\r - User",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RooftopAcademy/gerardo_saucedo_compartido.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RooftopAcademy/gerardo_saucedo_compartido/issues"
+  },
+  "homepage": "https://github.com/RooftopAcademy/gerardo_saucedo_compartido#readme",
+  "devDependencies": {
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
