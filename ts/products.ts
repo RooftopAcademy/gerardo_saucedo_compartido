@@ -10,8 +10,7 @@ function populateHTML() {
     store.getAllProducts().forEach((product) => {
       const view = getItemView(product);
       view.addEventListener("click", function () {
-        localStorage.setItem("id", this.dataset.id);
-        window.location.href = "detail.html";
+        window.location.href = `detail.html?id=${this.dataset.id}`;
       });
       productsContainer.appendChild(view);
     });
