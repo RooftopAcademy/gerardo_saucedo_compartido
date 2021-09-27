@@ -1,3 +1,10 @@
+import { getHeaderView } from "../src/views/headerView";
+
+function addHeader() {
+  const header = document.getElementById("header");
+  header.innerHTML = getHeaderView();
+}
+
 function toggleResponsiveMenu() {
   document
     .getElementById("responsive-icon")
@@ -14,5 +21,7 @@ function addLiks() {
   (document.getElementById("catalog-href") as HTMLAnchorElement).href =
     "products.html";
 }
+
+addHeader();
 addLiks();
 toggleResponsiveMenu();
