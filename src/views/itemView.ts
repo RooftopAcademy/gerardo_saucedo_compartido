@@ -1,6 +1,8 @@
-export function getItemView(product) {
+import { Product } from "../Product";
+
+export function getItemView(product: Product) {
   const template = document.createElement("section");
-  template.dataset.id = product.getId();
+  template.dataset.id = product.getId().toString();
   template.classList.add(
     "card",
     "display--flex",

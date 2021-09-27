@@ -26,43 +26,43 @@ export class Product {
   getId() {
     return this.id;
   }
-  setId(id) {
+  setId(id: number) {
     this.id = id;
   }
   getName() {
     return this.name;
   }
-  setName(name) {
+  setName(name: string) {
     this.name = name;
   }
   getDescription() {
     return this.description;
   }
-  setDescription(description) {
+  setDescription(description: string) {
     this.description = description;
   }
   getLevel() {
     return this.level;
   }
-  setLevel(level) {
+  setLevel(level: number) {
     this.level = level;
   }
   getImage() {
     return this.image;
   }
-  setImage(image) {
+  setImage(image: string) {
     this.image = image;
   }
   getPrice() {
     return this.price;
   }
-  setPrice(price) {
+  setPrice(price: number) {
     this.price = price;
   }
   getQuantity() {
     return this.quantity;
   }
-  setQuantity(quantity) {
+  setQuantity(quantity: number) {
     this.quantity = quantity;
   }
 }

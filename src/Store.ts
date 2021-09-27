@@ -60,7 +60,7 @@ export class Store {
   getAllProducts() {
     return this.productsList;
   }
-  findProductById(id) {
+  findProductById(id: number) {
     return this.productsList.find((product) => product.id == id);
   }
 }
