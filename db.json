@@ -6,7 +6,7 @@
       "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
       "level": 144,
       "image": "../img/anti-air.png",
-      "price": "$50",
+      "price": "50",
       "quantity": 200
     },
     {
@@ -15,7 +15,7 @@
       "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
       "level": 144,
       "image": "../img/broadside.png",
-      "price": "$50",
+      "price": "50",
       "quantity": 200
     },
     {
@@ -24,7 +24,7 @@
       "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
       "level": 144,
       "image": "../img/ceiling-drop-trap.png",
-      "price": "$50",
+      "price": "50",
       "quantity": 200
     },
     {
@@ -33,7 +33,7 @@
       "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
       "level": 144,
       "image": "../img/ceiling-electric-field.png",
-      "price": "$50",
+      "price": "50",
       "quantity": 200
     },
     {
@@ -42,7 +42,7 @@
       "description": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
       "level": 144,
       "image": "../img/ceiling-gas-trap.png",
-      "price": "$50",
+      "price": "50",
       "quantity": 200
     }
   ]
