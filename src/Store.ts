@@ -10,57 +10,44 @@ export class Store {
     this.cart = new Cart();
     this.user = new User();
   }
-  fetchProducts() {
-    this.productsList.push(
-      new Product(
-        0,
-        "Anti air trap",
-        "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-        144,
-        "../img/anti-air.png"
-      )
-    );
-    this.productsList.push(
-      new Product(
-        1,
-        "Broadside trap",
-        "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-        144,
-        "../img/broadside.png"
-      )
-    );
-    this.productsList.push(
-      new Product(
-        2,
-        "Ceiling drop trap",
-        "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-        144,
-        "../img/ceiling-drop-trap.png"
-      )
-    );
-    this.productsList.push(
-      new Product(
-        3,
-        "Ceiling electric field trap",
-        "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-        144,
-        "../img/ceiling-electric-field.png"
-      )
-    );
-    this.productsList.push(
-      new Product(
-        4,
-        "Ceiling gas trap",
-        "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
-        144,
-        "../img/ceiling-gas-trap.png"
-      )
+
+  async fetchProducts() {
+    return fetch(
+      "https://my-json-server.typicode.com/RooftopAcademy/gerardo_saucedo_compartido/products"
+    )
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+  setProducts(arr: []) {
+    arr.forEach((item) => {
+      this.productsList.push(this.newProductFromJson(item));
+    });
+  }
+  newProductFromJson(json: {
+    id: number;
+    name: string;
+    description: string;
+    level: number;
+    image: string;
+    price: number;
+    quantity: number;
+  }) {
+    return new Product(
+      json.id,
+      json.name,
+      json.description,
+      json.level,
+      json.image,
+      json.price,
+      json.quantity
     );
   }
   getAllProducts() {
     return this.productsList;
   }
-  findProductById(id: number) {
+  findProductById(id) {
     return this.productsList.find((product) => product.id == id);
   }
 }
