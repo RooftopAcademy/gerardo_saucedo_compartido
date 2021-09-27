@@ -2,6 +2,7 @@ module.exports = {
   entry: {
     index: ["./ts/app.ts", "./ts/index.ts"],
     products: ["./ts/app.ts", "./ts/products.ts"],
+    detail: ["./ts/app.ts", "./ts/detail.ts"],
   },
   output: {
     filename: "./js/[name].js",
