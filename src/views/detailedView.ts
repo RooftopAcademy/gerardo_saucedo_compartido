@@ -1,13 +1,13 @@
-import { Product } from "../Product";
+import Product from '../Product';
 
 export function getDetailedView(product: Product) {
-  const template = document.createElement("section");
+  const template = document.createElement('section');
   template.classList.add(
-    "card",
-    "display--flex",
-    "flex-direction--column",
-    "flex--center",
-    "text--center"
+    'card',
+    'display--flex',
+    'flex-direction--column',
+    'flex--center',
+    'text--center'
   );
   console.log(product);
   template.innerHTML = `

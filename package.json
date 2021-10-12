@@ -4,6 +4,7 @@
   "description": "- Catalog\r - Cart\r - User",
   "main": "test.js",
   "dependencies": {
+    "express": "^4.17.1",
     "source-map-loader": "^3.0.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.3",
@@ -14,7 +15,8 @@
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.2"
+    "eslint-plugin-import": "^2.24.2",
+    "webpack-cli": "^4.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

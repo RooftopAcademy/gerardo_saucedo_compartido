@@ -1,5 +1,5 @@
-import { Product } from "./Product";
-import { Store } from "./Store";
+import Product from './Product';
+import { Store } from './Store';
 
 export class Cart {
   private productsList: Product[];
@@ -12,7 +12,7 @@ export class Cart {
     let total = 0;
     this.productsList.forEach((product: Product) => {
       console.log(product.getPrice());
-      total += Number(product.getPrice().toString().replace("$", ""));
+      total += Number(product.getPrice().toString().replace('$', ''));
     });
     return total;
   }
@@ -23,7 +23,7 @@ export class Cart {
     return this.productsList;
   }
   static fromLocalStorage(): Cart {
-    const object: any = JSON.parse(localStorage.getItem("cart"));
+    const object: any = JSON.parse(localStorage.getItem('cart'));
     const products: Product[] = [];
     if (object) {
       object.productsList.forEach(
@@ -46,6 +46,6 @@ export class Cart {
     return cart;
   }
   static saveToLocalStorage(cart: Cart) {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
 }

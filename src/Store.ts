@@ -1,6 +1,6 @@
-import { Product } from "../src/Product";
-import { Cart } from "../src/Cart";
-import { User } from "../src/User";
+import Product from '../src/Product';
+import { Cart } from '../src/Cart';
+import { User } from '../src/User';
 export class Store {
   productsList: Product[];
   cart: Cart;
@@ -13,7 +13,7 @@ export class Store {
 
   async fetchProducts() {
     return fetch(
-      "https://my-json-server.typicode.com/RooftopAcademy/gerardo_saucedo_compartido/products"
+      'https://my-json-server.typicode.com/RooftopAcademy/gerardo_saucedo_compartido/products'
     )
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .catch((error) => {
