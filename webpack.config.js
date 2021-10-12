@@ -3,6 +3,7 @@ module.exports = {
     index: ["./ts/app.ts", "./ts/index.ts"],
     products: ["./ts/app.ts", "./ts/products.ts"],
     detail: ["./ts/app.ts", "./ts/detail.ts"],
+    cart: ["./ts/app.ts", "./ts/cart.ts"],
   },
   output: {
     filename: "./js/[name].js",

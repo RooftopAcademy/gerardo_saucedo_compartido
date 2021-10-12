@@ -18,10 +18,10 @@
 .card {
   background: rgb(var(--card-background-color));
   border-bottom: 0.2rem solid transparent;
-  max-width: 14rem;
+  width: 14rem;
   cursor: pointer;
 }
-.card:not(:last-child) {
+.card {
   margin: 2rem;
 }
 .card:hover {
@@ -42,7 +42,16 @@
   font-size: 1rem;
   margin-bottom: 0.3rem;
 }
-.card__price {
+.card__bottom {
   margin-top: 0;
   margin-bottom: 1rem;
+  width: 100%;
+  cursor: default;
+}
+.card__button {
+  color: inherit;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }

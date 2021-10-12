@@ -10,6 +10,7 @@ function populateHTML() {
 
   store.fetchProducts().then((res) => {
     store.setProducts(res);
+    console.log(store.getAllProducts());
     store.getAllProducts().forEach((product) => {
       const view = getItemView(product);
       view.addEventListener("click", function () {

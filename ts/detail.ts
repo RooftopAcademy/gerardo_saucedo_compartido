@@ -1,19 +1,29 @@
-import { Store } from "../src/Store";
-import { getItemView } from "../src/views/itemView";
+import { Store } from '../src/Store';
+import { getDetailedView } from '../src/views/detailedView';
+import { showCartCount } from './app';
 
 function populateHTML() {
-  const title = document.getElementById("banner-title");
-  title.innerHTML = "Detailed item";
+  const title = document.getElementById('banner-title');
+  title.innerHTML = 'Detailed item';
 
-  const productsContainer = document.getElementById("product-detail");
+  const productsContainer = document.getElementById('product-detail');
   const store = new Store();
-  const id = new URLSearchParams(window.location.search).get("id");
+  const id = new URLSearchParams(window.location.search).get('id');
   store.fetchProducts().then((res) => {
     store.setProducts(res);
-    const view = getItemView(
+    const view = getDetailedView(
       store.findProductById(id == null ? -1 : Number(id))
     );
+    const addToCartButton = view.querySelector('#add-to-cart');
+    addToCartButton.addEventListener('click', function () {
+      store.cart.addProduct(store.findProductById(this.dataset.id));
+      showCartCount();
+    });
     productsContainer.appendChild(view);
   });
 }
 populateHTML();
+
+const original = { a: 1, b: 2 };
+const copy = Object.assign(original, { c: 3 });
+delete copy.a;

@@ -7,7 +7,7 @@ export class Store {
   user: User;
   constructor() {
     this.productsList = [];
-    this.cart = new Cart();
+    this.cart = Cart.fromLocalStorage();
     this.user = new User();
   }
 
@@ -22,10 +22,10 @@ export class Store {
   }
   setProducts(arr: []) {
     arr.forEach((item) => {
-      this.productsList.push(this.newProductFromJson(item));
+      this.productsList.push(Store.newProductFromJson(item));
     });
   }
-  newProductFromJson(json: {
+  static newProductFromJson(json: {
     id: number;
     name: string;
     description: string;
@@ -44,10 +44,10 @@ export class Store {
       json.quantity
     );
   }
-  getAllProducts() {
+  getAllProducts(): Product[] {
     return this.productsList;
   }
-  findProductById(id: number) {
-    return this.productsList.find((product) => product.id == id);
+  findProductById(id: number): Product {
+    return this.productsList.find((product) => product.getId() == id);
   }
 }

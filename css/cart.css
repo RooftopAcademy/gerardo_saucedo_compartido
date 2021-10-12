@@ -1,0 +1,8 @@
+.card {
+  width: 100%;
+  margin: 1rem;
+}
+.card__icon {
+  width: 5rem;
+  height: 5rem;
+}

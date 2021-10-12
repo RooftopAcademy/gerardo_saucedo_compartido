@@ -1,4 +1,6 @@
 import { getHeaderView } from "../src/views/headerView";
+import { Cart } from "../src/Cart";
+import { Product } from "../src/Product";
 
 function addHeader() {
   const header = document.getElementById("header");
@@ -20,8 +22,17 @@ function addLiks() {
     "index.html";
   (document.getElementById("catalog-href") as HTMLAnchorElement).href =
     "products.html";
+  (document.getElementById("cart-href") as HTMLAnchorElement).href =
+    "cart.html";
+}
+
+export function showCartCount() {
+  const cart = Cart.fromLocalStorage();
+  document.getElementById("cart-count").textContent =
+    cart.productsCount.toString();
 }
 
 addHeader();
 addLiks();
 toggleResponsiveMenu();
+showCartCount();
