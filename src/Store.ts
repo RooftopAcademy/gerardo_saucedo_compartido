@@ -12,9 +12,7 @@ export class Store {
   }
 
   async fetchProducts() {
-    return fetch(
-      'https://my-json-server.typicode.com/RooftopAcademy/gerardo_saucedo_compartido/products'
-    )
+    return fetch('http://192.168.1.3:3001/products')
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .catch((error) => {
         console.error(error);

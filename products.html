@@ -24,7 +24,14 @@
   <body>
     <header id="header" class="header"></header>
     <main class="main shadow--rounded display--flex flex--space-evenly">
-      <aside class="sidebar flex--start"><h2>Lorem, ipsum dolor.</h2></aside>
+      <aside class="sidebar flex--start">
+        <select name="" id="sort-value">
+          <option disabled value="">Order by</option>
+          <option value="id">Default</option>
+          <option value="price">Price</option>
+          <option value="name">Name</option>
+        </select>
+      </aside>
       <div
         id="products"
         class="products display--flex flex--wrap flex--space-evenly"

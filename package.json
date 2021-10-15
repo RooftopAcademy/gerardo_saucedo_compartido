@@ -19,7 +19,8 @@
     "webpack-cli": "^4.9.0"
   },
   "scripts": {
-    "start": "nodemon index.ts"
+    "start": "nodemon index.ts",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",

@@ -9,7 +9,7 @@ export function getCartItem(product: Product): HTMLElement {
       <h2 class="card__title">${product.getName()}</h2>
       <p class="card__description">Quantity: ${product.getQuantity()}</p>
     </div>
-    <h2 class="card__price">${product.getPrice()}</h2>`;
+    <h2 class="card__price">$${product.getPrice()}</h2>`;
   return template;
 }
 export function getTotalItem(quantity: number): HTMLElement {
