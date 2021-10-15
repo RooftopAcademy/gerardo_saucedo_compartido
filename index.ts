@@ -31,7 +31,7 @@ api.get('/products', (request, response) => {
   response.json(db);
 });
 api.get('/products/:id', (request, response) => {
-  response.json(db.products.find((item) => (item.id = request.params.id)));
+  response.json(db.products.find((item) => item.id == request.params.id));
 });
 
 api.listen(portApi, () => {
