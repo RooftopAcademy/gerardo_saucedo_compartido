@@ -1,17 +1,19 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const api = express();
 
 const port = 3000;
 const portApi = 3001;
 
-app.use(express.static(__dirname));
+app.use(express.static('dist'));
 
 app.get('/', (request, response) => {
   response.sendFile(`${__dirname}/index.html`);
 });
 
 app.get('/products', (request, response) => {
+  console.log(path.resolve(__dirname, 'dist'));
   response.sendFile(`${__dirname}/products.html`);
 });
 
