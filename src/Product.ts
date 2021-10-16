@@ -1,19 +1,29 @@
-class Product {
-  private id: number;
-  private name: string;
-  private description: string;
-  private level: number;
-  private image: string;
-  private price: number;
-  private quantity: number;
+export class Product implements ProductInterface {
+  id: number;
+  name: string;
+  description: string;
+  level: number;
+  image: string;
+  price: number;
+  quantity: number;
   constructor(
-    id = 0,
-    name = '',
-    description = '',
-    level = 144,
-    image = '../img/anti-air.png',
-    price = 50,
-    quantity = 200
+    {
+      id,
+      name,
+      description,
+      level,
+      image,
+      price,
+      quantity,
+    }: ProductInterface = {
+      id: 0,
+      name: '',
+      description: '',
+      level: 144,
+      image: '../img/anti-air.png',
+      price: 50,
+      quantity: 200,
+    }
   ) {
     this.id = id;
     this.name = name;
@@ -23,48 +33,14 @@ class Product {
     this.price = price;
     this.quantity = quantity;
   }
-  getId(): number {
-    return this.id;
-  }
-  setId(id: number) {
-    this.id = id;
-  }
-  getName(): string {
-    return this.name;
-  }
-  setName(name: string) {
-    this.name = name;
-  }
-  getDescription(): string {
-    return this.description;
-  }
-  setDescription(description: string) {
-    this.description = description;
-  }
-  getLevel(): number {
-    return this.level;
-  }
-  setLevel(level: number) {
-    this.level = level;
-  }
-  getImage(): string {
-    return this.image;
-  }
-  setImage(image: string) {
-    this.image = image;
-  }
-  getPrice(): number {
-    return this.price;
-  }
-  setPrice(price: number) {
-    this.price = price;
-  }
-  getQuantity(): number {
-    return this.quantity;
-  }
-  setQuantity(quantity: number) {
-    this.quantity = quantity;
-  }
 }
 
-export default Product;
+export interface ProductInterface {
+  readonly id: number;
+  readonly name: string;
+  readonly description: string;
+  readonly level: number;
+  readonly image: string;
+  readonly price: number;
+  readonly quantity: number;
+}

@@ -42,7 +42,7 @@ api.get('/products', (request, response) => {
     'X-Requested-With,content-type'
   );
 
-  response.json(db.products);
+  response.json(db.productList);
 });
 api.get('/products/:id', (request, response) => {
   response.json(db.products.find((item) => item.id == request.params.id));

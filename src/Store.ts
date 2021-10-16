@@ -1,51 +1,36 @@
-import Product from '../src/Product';
+import { Product } from '../src/Product';
 import { Cart } from '../src/Cart';
 import { User } from '../src/User';
-export class Store {
-  productsList: Product[];
+
+export default class Store {
+  productList: Product[];
   cart: Cart;
   user: User;
   constructor() {
-    this.productsList = [];
+    this.productList = [];
     this.cart = Cart.fromLocalStorage();
     this.user = new User();
   }
 
   async fetchProducts() {
-    return fetch('http://192.168.1.3:3001/products')
+    return await fetch('http://192.168.1.3:3001/products')
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+      .then((json) => json)
       .catch((error) => {
         console.error(error);
       });
   }
-  setProducts(arr: []) {
+  setProductList(arr: []) {
     arr.forEach((item) => {
-      this.productsList.push(Store.newProductFromJson(item));
+      this.productList.push(new Product(item));
     });
   }
-  static newProductFromJson(json: {
-    id: number;
-    name: string;
-    description: string;
-    level: number;
-    image: string;
-    price: number;
-    quantity: number;
-  }) {
-    return new Product(
-      json.id,
-      json.name,
-      json.description,
-      json.level,
-      json.image,
-      json.price,
-      json.quantity
-    );
+
+  getProductList(): Product[] {
+    return this.productList;
   }
-  getAllProducts(): Product[] {
-    return this.productsList;
-  }
+
   findProductById(id: number): Product {
-    return this.productsList.find((product) => product.getId() == id);
+    return this.productList.find((product) => product.id == id);
   }
 }
