@@ -1,6 +1,5 @@
 import getHeaderView from '../src/views/headerView';
 import { Cart } from '../src/Cart';
-import Product from '../src/Product';
 
 function addHeader() {
   const header = document.getElementById('header');

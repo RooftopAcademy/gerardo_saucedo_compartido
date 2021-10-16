@@ -1,4 +1,4 @@
-import { Store } from '../src/Store';
+import Store from '../src/Store';
 import { getDetailedView } from '../src/views/detailedView';
 import { showCartCount } from './app';
 
@@ -10,7 +10,7 @@ function populateHTML() {
   const store = new Store();
   const id = new URLSearchParams(window.location.search).get('id');
   store.fetchProducts().then((res) => {
-    store.setProducts(res);
+    store.setProductList(res);
     const view = getDetailedView(
       store.findProductById(id == null ? -1 : Number(id))
     );
@@ -23,7 +23,3 @@ function populateHTML() {
   });
 }
 populateHTML();
-
-const original = { a: 1, b: 2 };
-const copy = Object.assign(original, { c: 3 });
-delete copy.a;

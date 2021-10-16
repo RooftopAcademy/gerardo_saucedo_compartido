@@ -55,3 +55,33 @@
   padding: 0.5rem;
   cursor: pointer;
 }
+
+/*sidebar*/
+.sidebar {
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0.5rem;
+  box-shadow: 0.625rem 0.625rem 0.625rem 0.0312rem rgb(var(--primary-color));
+  border-radius: 0.125rem;
+  position: sticky;
+  top: 0;
+}
+.sidebar__order {
+  border: none;
+  cursor: pointer;
+}
+
+/*main*/
+.main {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .main {
+    flex-direction: row;
+  }
+  .sidebar {
+    width: 25%;
+    justify-content: center;
+  }
+}

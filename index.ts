@@ -13,7 +13,6 @@ app.get('/', (request, response) => {
 });
 
 app.get('/products', (request, response) => {
-  console.log(path.resolve(__dirname, 'dist'));
   response.sendFile(`${__dirname}/products.html`);
 });
 
@@ -28,10 +27,25 @@ app.listen(port, () => {
 //API
 const db = require('./db.json');
 api.get('/products', (request, response) => {
-  response.json(db);
+  // Website you wish to allow to connect
+  response.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+  // Request methods you wish to allow
+  response.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, OPTIONS, PUT, PATCH, DELETE'
+  );
+
+  // Request headers you wish to allow
+  response.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-Requested-With,content-type'
+  );
+
+  response.json(db.productList);
 });
 api.get('/products/:id', (request, response) => {
-  response.json(db.products.find((item) => (item.id = request.params.id)));
+  response.json(db.products.find((item) => item.id == request.params.id));
 });
 
 api.listen(portApi, () => {
